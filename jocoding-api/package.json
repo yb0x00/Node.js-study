@@ -9,6 +9,6 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "figlet": "^1.8.1"
+    "express": "^5.1.0"
   }
 }
