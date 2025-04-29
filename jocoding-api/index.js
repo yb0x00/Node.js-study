@@ -6,12 +6,21 @@ app.get('/', (req, res) => {    //HTTP 메소드 라우팅 콜백함수
     res.send('Hello World!')
 })
 
-app.get('/dog', (req, res) => {
-    res.json({'sound':'멍멍'})
-})
+//params 사용
+// app.get('/user/:id', (req, res) => {
+//     const q = req.params
+//     //console.log(q)  //{ id: 'yeong' }
+//     console.log(q.id)
 
-app.get('/cat', (req, res) => {
-    res.json({'sound':'야옹'})
+//     res.json({'userid': q.id})
+// })
+
+//query 사용
+app.get('/user/:id', (req, res) => {
+    const q = req.query
+    console.log(q)
+
+    res.json({'userid': q.name})
 })
 
 app.listen(port, () => {
